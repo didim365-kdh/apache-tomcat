@@ -5,7 +5,7 @@ metadata:
 data:
   vhosts.conf: |
     <VirtualHost *:80>
-      ServerName localhost
+      ServerName www.httpd.com
       DocumentRoot "/usr/local/apache2/htdocs"
 
       <Directory "/usr/local/apache2/htdocs">
