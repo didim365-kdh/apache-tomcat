@@ -15,3 +15,5 @@ data:
         ProxyPassReverse "/" "http://tomcat:8080/"
     </VirtualHost>
 
+    LoadModule mpm_event_module modules/mod_mpm_event.so
+
