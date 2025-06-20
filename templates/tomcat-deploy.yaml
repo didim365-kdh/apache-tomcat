@@ -17,4 +17,10 @@ spec:
           image: {{ .Values.tomcat.image }}
           ports:
             - containerPort: 8080
-
+          volumeMounts:
+            - name: tomcat-config
+              mountPath: /usr/local/tomcat/webapps/ROOT
+      volumes:
+        - name: tomcat-config
+          persistentVolumeClaim:
+            claimName: nfs-pvc-pvc
