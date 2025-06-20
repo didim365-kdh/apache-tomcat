@@ -15,5 +15,5 @@ data:
         ProxyPassReverse "/" "http://tomcat:8080/"
     </VirtualHost>
 
-    Include conf/extra/httpd-mpm.conf
+    Include conf.modules.d/*.conf
  
