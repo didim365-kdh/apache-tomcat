@@ -5,13 +5,13 @@ metadata:
 data:
   vhosts.conf: |
     <VirtualHost *:80>
-ServerName localhost
-DocumentRoot "/usr/local/apache2/htdocs"
+      ServerName localhost
+      DocumentRoot "/usr/local/apache2/htdocs"
 
-<Directory "/usr/local/apache2/htdocs">
-AllowOverride None
-Require all granted
-</Directory>
-ProxyPass "/" "http://tomcat:8080/"
-ProxyPassReverse "/" "http://tomcat:8080/"
-</VirtualHost>
+      <Directory "/usr/local/apache2/htdocs">
+          AllowOverride None
+          Require all granted
+      </Directory>
+      ProxyPass "/" "http://tomcat:8080/"
+      ProxyPassReverse "/" "http://tomcat:8080/"
+    </VirtualHost>
