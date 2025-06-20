@@ -3,7 +3,6 @@ apache:
   replicas: 1
   servicePort: 80
   
-
 tomcat:
   image: tomcat:9.0
   replicas: 1
@@ -18,6 +17,7 @@ autoscaling:
 ingress:
   enabled: true
   className: "nginx"
+  annotations: {}
   hosts:
     - host: www.httpd.com
       paths:
@@ -27,3 +27,7 @@ ingress:
 serviceAccount:
   create: true
   automount: true
+
+
+service:
+  port: 80
