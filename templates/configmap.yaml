@@ -6,14 +6,8 @@ data:
   httpd.conf: |
     ServerRoot "/usr/local/apache2"
     Listen 80
-    LoadModule proxy_module modules/mod_proxy.so
     LoadModule mpm_event_module modules/mod_mpm_event.so
-    LoadModule proxy_http_module modules/mod_proxy_http.so
-    ServerName localhost
 
-    <VirtualHost *:80>
-        ProxyPass "/" "http://tomcat:8080/"
-        ProxyPassReverse "/" "http://tomcat:8080/"
-    </VirtualHost>
+    ServerName localhost
 
  
