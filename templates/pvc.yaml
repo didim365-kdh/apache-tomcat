@@ -10,5 +10,5 @@ spec:
       storage: 1Gi
   storageclassName: ktc-nfs-client
   volumeMode: Filesystem
-  volumeName: tomcat-data
+  volumeName: nfs-pvc
 
