@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat
+spec:
+  type: ClusterIP
+  selector:
+    app: tomcat
+  ports:
+    - port: {{ .Values.tomcat.servicePort }}
+      targetPort: 8080
+

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apache-config
+data:
+  httpd.conf: |
+    ServerRoot "/usr/local/apache2"
+    Listen 80
+    LoadModule proxy_module modules/mod_proxy.so
+    LoadModule proxy_http_module modules/mod_proxy_http.so
+    ServerName localhost
+
+    <VirtualHost *:80>
+        ProxyPass "/" "http://tomcat:8080/"
+        ProxyPassReverse "/" "http://tomcat:8080/"
+    </VirtualHost>
+
