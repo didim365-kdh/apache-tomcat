@@ -8,3 +8,6 @@ tomcat:
   replicas: 1
   servicePort: 8080
 
+serviceAccount:
+  create: true
+  name: apache-tomcat-sa
