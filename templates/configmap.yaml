@@ -15,5 +15,3 @@ data:
   ProxyPass "/" "http://tomcat:8080/"
   ProxyPassReverse "/" "http://tomcat:8080/"
 </VirtualHost>
-
- 
