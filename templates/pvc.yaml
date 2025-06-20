@@ -9,3 +9,6 @@ spec:
     requests:
       storage: 1Gi
   storageclassName: ktc-nfs-client
+  volumeMode: Filesystem
+  volumeName: pvc-58e3387e-3e43-4be6-91b8-b3680df446ca
+
