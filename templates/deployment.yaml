@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apache
+  name: nginx
 spec:
   replicas: {{ .Values.apache.replicas }}
   selector:
@@ -19,10 +19,10 @@ spec:
             - containerPort: 80
           volumeMounts:
             - name: config-volume
-              mountPath: /usr/local/apache2/conf/extra/vhosts.conf
-              subPath: vhosts.conf
+              mountPath: /etc/nginx/conf.d
+              subPath: default.conf
       volumes:
         - name: config-volume
           configMap:
-            name: vhosts-config
+            name: nginx-config
 
