@@ -19,7 +19,7 @@ spec:
             - containerPort: 8080
           volumeMounts:
             - name: tomcat-config
-              mountPath: /usr/local/tomcat/webapps/ROOT
+              mountPath: /usr/local/tomcat/webapps
       volumes:
         - name: tomcat-config
           persistentVolumeClaim:
