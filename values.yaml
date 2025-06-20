@@ -1,6 +1,6 @@
 apache:
   image: nginx:latest
-  replicas: 1
+  replicas: 5
   servicePort: 80
   
 tomcat:
