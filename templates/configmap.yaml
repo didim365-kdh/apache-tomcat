@@ -3,15 +3,10 @@ kind: ConfigMap
 metadata:
   name: vhosts-config
 data:
-  vhosts.conf: |
-    <VirtualHost *:80>
-      ServerName www.httpd.com
-      DocumentRoot "/usr/local/apache2/htdocs"
-
-      <Directory "/usr/local/apache2/htdocs">
-          AllowOverride None
-          Require all granted
-      </Directory>
-      ProxyPass "/" "http://tomcat:8080/"
-      ProxyPassReverse "/" "http://tomcat:8080/"
-    </VirtualHost>
+  default.conf: |
+    server {
+        listen 80;
+        location / {
+            proxy_pass http://tomcat:8080;
+        }
+    }
