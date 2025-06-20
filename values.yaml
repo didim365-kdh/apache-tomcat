@@ -2,12 +2,28 @@ apache:
   image: httpd:2.4
   replicas: 1
   servicePort: 80
+  
 
 tomcat:
   image: tomcat:9.0
   replicas: 1
   servicePort: 8080
 
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+    - host: www.httpd.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
 serviceAccount:
   create: true
-  name: apache-tomcat-sa
+  automount: true
