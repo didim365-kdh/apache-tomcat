@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  annotations: {}
+  generation: 1
+  name: apache-tomcat
+  namespace: apache-tomcat
+spec:
+  gateways:
+  - apache-gateway
+  hosts:
+  - '*'
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: apache
+        port:
+          number: 80
