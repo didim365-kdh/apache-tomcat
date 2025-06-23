@@ -16,6 +16,7 @@ autoscaling:
 
 ingress:
   enabled: true
+  namespace: apache-tomcat
   className: "nginx"
   annotations: {}
   hosts:
