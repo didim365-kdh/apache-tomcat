@@ -16,7 +16,7 @@ autoscaling:
 
 ingress:
   enabled: true
-  namespace: service-mash
+  Namespace: servicemesh
   className: "nginx"
   annotations: {}
   hosts:
