@@ -8,8 +8,8 @@ spec:
   capacity:
     storage: 1Gi
   nfs:
-    path: /share_f46ad59c_02e1_4964_981c_096e1c82b45c/tomcat_data01
-    server: 172.26.0.119
+    path: /share_4514213e_fe5b_4cd4_bc78_8aa193b06f4b/tomcat_data01
+    server: 172.26.0.89
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: ktc-nfs-client
+  storageClassName: ktc-nfs-client-ssd
   volumeMode: Filesystem
