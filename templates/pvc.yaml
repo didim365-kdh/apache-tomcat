@@ -8,7 +8,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ktc-nfs-client
+  storageClassName: ktc-nfs-client-ssd
   volumeMode: Filesystem
   volumeName: nfs-pvc
 
