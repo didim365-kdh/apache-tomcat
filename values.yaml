@@ -2,11 +2,13 @@ apache:
   image: nginx:latest
   replicas: 5
   servicePort: 80
+  tag: v1
   
 tomcat:
   image: tomcat:9.0
   replicas: 5
   servicePort: 8080
+  tag: v1
 
 autoscaling:
   enabled: false
